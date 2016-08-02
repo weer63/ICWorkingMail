@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IC Working Mail</string>
+    <string name="app_settings">Setting</string>
+    <string name="btnWorkingText">Working</string>
+    <string name="btnLeavingText">Leaving</string>
+    <color name="btnWorkingColor">#b0f0c1</color>
+    <color name="btnLeavingColor">#ffd1c3</color>
+    <string name="subjWorking">Working</string>
+    <string name="subjLeaving">Leaving</string>
+    <string name="bodyWorking">Office</string>
+    <string name="bodyLeaving">Home</string>
+</resources>
