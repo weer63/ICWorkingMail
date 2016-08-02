@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1">
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnWorkingText"
+            android:id="@+id/btnWorking"
+            android:layout_weight="0.29"
+            android:background="@color/btnWorkingColor"
+            android:textColor="@android:color/black"
+            />
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnLeavingText"
+            android:id="@+id/btnLeaving"
+            android:layout_weight="0.29"
+            android:background="@color/btnLeavingColor"
+            android:textColor="@android:color/black"/>
+
+</LinearLayout>
+
