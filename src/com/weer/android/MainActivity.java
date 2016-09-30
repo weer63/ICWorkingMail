@@ -54,6 +54,10 @@ public class MainActivity extends Activity implements OnClickListener{
                 intent.putExtra("mailPassword",mailPref.getMailPassword());
                 startActivityForResult(intent,1);
                 break;
+            case R.id.menu_preference:
+                Intent intent1 = new Intent(this,PreferenceActivity.class);
+                startActivity(intent1);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

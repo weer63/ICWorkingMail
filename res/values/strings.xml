@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">IC Working Mail</string>
     <string name="app_settings">Setting</string>
+
     <string name="btnWorkingText">Working</string>
     <string name="btnLeavingText">Leaving</string>
     <color name="btnWorkingColor">#b0f0c1</color>
