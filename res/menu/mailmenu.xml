@@ -5,9 +5,9 @@
         <item android:id="@+id/menu_settings"
               android:title="Settings">
         </item>
-        <item android:id="@+id/menu_preference"
+<!--        <item android:id="@+id/menu_preference"
               android:title="Preference">
-        </item>
+        </item>-->
 
     </group>
 </menu>

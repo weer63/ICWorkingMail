@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +19,7 @@ public class MainActivity extends Activity implements OnClickListener{
      * Called when the activity is first created.
      */
 
-    Button btnWorking,btnLeaving;
+    Button btnWorking,btnLeaving,btnStartBreak,btnEndBreak;
     IEmailSender iEmail;
     Preference mailPref;
     private static final String logTAG = "WEER";
@@ -30,10 +31,13 @@ public class MainActivity extends Activity implements OnClickListener{
 
         btnWorking = (Button)findViewById(R.id.btnWorking);
         btnLeaving = (Button)findViewById(R.id.btnLeaving);
+        btnStartBreak = (Button)findViewById(R.id.btnStartBreak);
+        btnEndBreak = (Button)findViewById(R.id.btnEndBreak);
 
         btnWorking.setOnClickListener(this);
         btnLeaving.setOnClickListener(this);
-
+        btnEndBreak.setOnClickListener(this);
+        btnStartBreak.setOnClickListener(this);
         mailPref = new Preference();
         getPreference();
     }
@@ -54,10 +58,10 @@ public class MainActivity extends Activity implements OnClickListener{
                 intent.putExtra("mailPassword",mailPref.getMailPassword());
                 startActivityForResult(intent,1);
                 break;
-            case R.id.menu_preference:
+/*            case R.id.menu_preference:
                 Intent intent1 = new Intent(this,PreferenceActivity.class);
                 startActivity(intent1);
-                break;
+                break;*/
         }
         return super.onOptionsItemSelected(item);
     }
@@ -97,6 +101,28 @@ public class MainActivity extends Activity implements OnClickListener{
                     Toast.makeText(this,"Working",Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                      e.printStackTrace();
+                }
+                break;
+            case R.id.btnStartBreak:
+                iEmail = new IEmailSender(getResources().getString(R.string.mailSMTPServer),getResources().getString(R.string.mailSMTPPort),mailPref.getMailUser(),mailPref.getMailPassword());
+                try {
+                    AsyncSend mt = new AsyncSend();
+                    iEmail.setAdresses(mailPref.getMailFrom(),mailPref.getMailTo(),mailPref.getMailCc(),getResources().getString(R.string.subjStartBreak),getResources().getString(R.string.bodyStartBreak));
+                    mt.execute(iEmail);
+                    Toast.makeText(this,"Start Break",Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                break;
+            case R.id.btnEndBreak:
+                iEmail = new IEmailSender(getResources().getString(R.string.mailSMTPServer),getResources().getString(R.string.mailSMTPPort),mailPref.getMailUser(),mailPref.getMailPassword());
+                try {
+                    AsyncSend mt = new AsyncSend();
+                    iEmail.setAdresses(mailPref.getMailFrom(),mailPref.getMailTo(),mailPref.getMailCc(),getResources().getString(R.string.subjEndBreak),getResources().getString(R.string.bodyEndBreak));
+                    mt.execute(iEmail);
+                    Toast.makeText(this,"End Break",Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
                 break;
         }

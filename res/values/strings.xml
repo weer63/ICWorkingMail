@@ -2,13 +2,21 @@
 <resources>
     <string name="app_name">IC Working Mail</string>
     <string name="app_settings">Setting</string>
-
     <string name="btnWorkingText">Working</string>
     <string name="btnLeavingText">Leaving</string>
-    <color name="btnWorkingColor">#b0f0c1</color>
-    <color name="btnLeavingColor">#ffd1c3</color>
-    <string name="subjWorking">Working</string>
-    <string name="subjLeaving">Leaving</string>
+    <string name="btnStartBreakText">Start Break</string>
+    <string name="btnEndBreakText">End Break</string>
+    <string name="subjWorking">working</string>
+    <string name="subjLeaving">leaving</string>
+    <string name="subjStartBreak">start break</string>
+    <string name="subjEndBreak">end break</string>
     <string name="bodyWorking">Office</string>
     <string name="bodyLeaving">Home</string>
+    <string name="bodyStartBreak">Have Dinner</string>
+    <string name="bodyEndBreak">Dined</string>
+    <color name="btnWorkingColor">#b0f0c1</color>
+    <color name="btnLeavingColor">#ffd1c3</color>
+    <color name="btnStartBreakColor">#FFA83C77</color>
+    <color name="btnEndBreakColor">#FF02BD5D</color>
+
 </resources>

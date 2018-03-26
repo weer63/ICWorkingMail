@@ -21,11 +21,11 @@
                 android:label="@string/app_settings"
                 android:parentActivityName=".MainActivity">
         </activity>
-        <activity
+<!--        <activity
                 android:name=".PreferenceActivity"
                 android:label="@string/app_settings"
                 android:parentActivityName=".MainActivity">
-        </activity>
+        </activity>-->
 
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
