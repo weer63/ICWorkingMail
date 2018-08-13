@@ -3,7 +3,7 @@
     <group
         android:id="@+id/gr_settings">
         <item android:id="@+id/menu_settings"
-              android:title="Settings">
+              android:title="@string/settingString">
         </item>
 <!--        <item android:id="@+id/menu_preference"
               android:title="Preference">

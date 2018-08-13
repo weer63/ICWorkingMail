@@ -57,6 +57,7 @@ public class IEmailSender extends  javax.mail.Authenticator{
     }
 
     public synchronized void sendMail() throws Exception{
+
         Transport.send(this.message);
     }
 }

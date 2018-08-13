@@ -14,9 +14,9 @@
     <string name="bodyLeaving">Home</string>
     <string name="bodyStartBreak">Have Dinner</string>
     <string name="bodyEndBreak">Dined</string>
+    <string name="settingString">Settings</string>
     <color name="btnWorkingColor">#b0f0c1</color>
     <color name="btnLeavingColor">#ffd1c3</color>
     <color name="btnStartBreakColor">#FFA83C77</color>
     <color name="btnEndBreakColor">#FF02BD5D</color>
-
 </resources>
